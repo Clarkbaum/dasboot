@@ -1,6 +1,17 @@
 package com.boot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+//JPA related
+@Entity
 public class Shipwreck {
+	//sets what the id is going to be (its over the Long id)
+	@Id
+	//its going to increment the value for us
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
 	String name;
 	String description;
