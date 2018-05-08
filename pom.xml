@@ -44,17 +44,17 @@
 		<!--this allows me to create a table that looks like the model/shipwreck but i couldnt get it working. -->
 		<!--some issue with checksum not matching and i need to drop tables but they arnt dropping. oh well i dont use -->
 		<!--h2 or flyway on the job so im not going to waste anymore time on this-->
-		<!--pluralsight I didnt get work: spring boot->config and access a data source-> demo integration flywaydb-->
+		<!--pluralsight I didnt get work: spring boot->config and access a data source-> demo in tegration flywaydb-->
 		<!--<dependency>-->
 			<!--<groupId>org.flywaydb</groupId>-->
 			<!--<artifactId>flyway-core</artifactId>-->
 		<!--</dependency>-->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
