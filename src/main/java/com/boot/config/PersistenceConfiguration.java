@@ -28,6 +28,4 @@ public class PersistenceConfiguration {
 	public DataSource flywayDataSource() {
 		return DataSourceBuilder.create().build();
 	}
-
-	
 }
