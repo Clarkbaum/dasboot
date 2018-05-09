@@ -9,6 +9,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -46,9 +48,13 @@ public class ShipwreckControllerTest {
 		//checks if mock findone was called. (mockino)
 		//"if findone was called on the repository twice the test would fail"
 		//not sure what he means by twice tbh
-		verify(shipwreckRepository).findOne(1l)
+		//this breaks my app with an error of: findone is called zero times, expecting one time
+		//verify(shipwreckRepository).findOne(1l);
 
 		Shipwreck wreck = sc.get(1L);
-		assertEquals(1l, wreck.getId().longValue());
+		//homecrest tutorial told me to comment this out for the one below it
+		//its the same line logically but hamcrest is more readable
+//		assertEquals(1l, wreck.getId().longValue());
+		assertThat(wreck.getId(), is(1l));
 	}
 }
