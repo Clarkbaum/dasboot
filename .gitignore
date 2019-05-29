@@ -12,3 +12,8 @@ bundle.js
 #Java#
 .idea
 target/
+
+#vscode#
+.project
+.settings
+.classpath
